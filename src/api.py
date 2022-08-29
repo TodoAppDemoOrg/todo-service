@@ -1,4 +1,4 @@
-from uuid import UUID
+from uuid import UUID, uuid4
 from typing import List
 import dataclasses
 import winter
@@ -7,10 +7,14 @@ import winter
 @dataclasses.dataclass
 class Todo:
     id: UUID
-    description: str
+    title: str
+    description: str = ""
 
 
-todos: List[Todo] = []
+todos: List[Todo] = [
+    Todo(uuid4(), "Just a test task"),
+    Todo(uuid4(), "Do something wonderful today, good luck!"),
+]
 
 
 @winter.web.no_authentication
