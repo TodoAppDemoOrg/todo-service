@@ -1,4 +1,4 @@
-from uuid import UUID, uuid4
+from uuid import UUID
 from typing import List
 import dataclasses
 import winter
@@ -12,8 +12,10 @@ class Todo:
 
 
 todos: List[Todo] = [
-    Todo(uuid4(), "Just a test task"),
-    Todo(uuid4(), "Do something wonderful today, good luck!"),
+    Todo(UUID('11e7f524-8729-4286-81c4-991a10f408c1'), "Just a test task"),
+    Todo(UUID('2b892f00-2b44-4351-9d18-f6b19c1d6d42'), "Do something wonderful today, good luck!"),
+    Todo(UUID('333a2af4-4d24-446b-9024-95c477a25e93'), "The task is something about very important"),
+    Todo(UUID('43392dc0-3c93-4955-951e-7b836a58cfc4'), "Just do it"),
 ]
 
 
